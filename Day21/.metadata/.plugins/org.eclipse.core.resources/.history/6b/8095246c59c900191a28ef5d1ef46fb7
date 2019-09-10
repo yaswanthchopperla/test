@@ -1,0 +1,11 @@
+package com.hcl.employ;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainDept {
+	ApplicationContext ctx=new ClassPathXmlApplicationContext("jdbc.xml");
+    DeptInsertDao i=(DeptInsertDao)ctx.getBean("myDao");
+    
+    
+}

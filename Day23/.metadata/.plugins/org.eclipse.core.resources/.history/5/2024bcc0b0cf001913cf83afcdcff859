@@ -1,0 +1,43 @@
+<%@page import="com.hcl.hotel.Room"%>
+<%@page import="org.hibernate.Session"%>
+<%@page import="com.hcl.hotel.HibernateUtil"%>
+<%@page import="org.hibernate.SessionFactory"%>
+<%@page import="com.hcl.hotel.HotelCrud"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="BookRoom.jsp" method="get">
+   <center>
+   <select name="roomtype">
+     <option value="single"></option>
+     <option value="double"></option>
+   </select>
+   CostPerDAy :
+   <input type="text" name="costperday"/> <br/>
+   Status :
+   <input type="text" name="status" readonly="readonly" value="Available"/> <br/>   
+     
+   <input type="submit" value="CreateRoom"/>
+   </center>     
+</form>
+<%
+   if(request.getParameter("roomtype")!=null && request.getParameter("costperday")!=null ) {
+	   SessionFactory sf=HibernateUtil.getConnection();
+	   Session s=sf.openSession();
+	   Room r=new Room();
+	   r.setType(request.getParameter("type"));
+	   r.setCostPerDay(Integer.parseInt(request.getParameter("costperday")));
+	   r.setStatus(request.getParameter("status"));
+	   String res=HotelCrud.addRoom(r);
+	   out.println(res);
+   }
+
+%>
+</body>
+</html>

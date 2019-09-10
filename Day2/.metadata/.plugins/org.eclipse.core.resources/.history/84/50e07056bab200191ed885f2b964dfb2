@@ -1,0 +1,10 @@
+package com.hcl.inh;
+class Same{
+	int a;
+	private  int b;
+	protected int c;
+	int d;
+}
+public class P2 {
+
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+     function sum(){
+    	 
+    	 document.getElementById("res").innerHTML="sum is "+res
+     }
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<input type="button" value="firstNo"/>
+<input type="button" value="secondNo"/>
+<input type="button" value="sum"/>
+<span id="res"></span>
+</body>
+</html>

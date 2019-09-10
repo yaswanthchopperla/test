@@ -1,0 +1,38 @@
+package com.hcl.Exp;
+class Answer{
+	void max(int a, int b){
+		if(a>b){
+			System.out.println(a);
+		}else{
+			System.out.println(b);
+		}
+	}
+	void power(int a, int b){
+		int sum=1;
+		for (int i=1;i<=b;i++) {
+			sum=sum*a;
+			}
+		System.out.println(sum);
+		
+	}
+	void root(int a){
+		double t;
+		double sq=a/2;
+		do{
+			t=sq;
+			sq=((t+(a/t))/2);	
+		}while((t-sq)!=0);
+	System.out.println(t);
+	}	
+}
+public class Task {
+	public static void main(String[] args) {
+	int a,b;
+	Answer ob=new Answer();
+	ob.max(1,4);
+	ob.power(2,4);
+	ob.root(2);
+	}
+	
+
+}

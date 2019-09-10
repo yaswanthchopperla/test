@@ -1,0 +1,18 @@
+package com.hcl.java;
+
+public class FactDec {
+	public void fact(int n){
+		int f=1;
+		for(int i=n;i>1;i--){
+			f=f*i;
+		}
+		System.out.println("fact value"+f);
+	}
+	public static void main(String[] args) {
+		int n=4;
+		FactDec obj=new FactDec();
+		obj.fact(n);
+		
+	}
+
+}

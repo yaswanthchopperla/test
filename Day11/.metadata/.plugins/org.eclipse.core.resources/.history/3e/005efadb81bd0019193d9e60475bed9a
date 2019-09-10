@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<figcaption> This is sample image </figcaption></center>
+<center>
+<figure>
+        <img src="1.jpg" height ="300" width="300"/>
+         <img src="2.jpg" height ="300" width="300"/>
+</figure>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+package com.hcl.Exp;
+class InvalidEmailException extends Exception{
+	public InvalidEmailException(String error){
+		super(error);
+	}
+}
+class InvalidUserNameException extends Exception{
+	public InvalidUserNameException (String error){
+		super(error);
+	}
+}
+public class EmailCheck {
+	public void Check(String a) throws InvalidUserNameException,InvalidEmailException{
+		boolean flag=true;
+		int s,b;
+		String q;
+		s=a.indexOf('@');		
+		if(s==-1){
+			flag=false;
+			throw new InvalidUserNameException("invalid username");	
+		}
+		q=a.substring(0,s);
+		b=q.length();
+		if(b>12){
+			flag=false;
+			throw new InvalidUserNameException("long username");
+		}
+		if(flag==true){
+			System.out.println(a);
+		}
+}
+	public static void main(String[] args) {
+		try {
+			new EmailCheck().Check("sai214465414454@gmail.com");
+		} catch (InvalidUserNameException  e) {
+			System.out.println("invalid username");
+		}
+			 catch (InvalidEmailException  e) {
+					System.out.println("invalid Email");
+		 }catch(Exception e){
+
+			e.printStackTrace();
+		}
+		
+	}
+
+}
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+      <form name = "frmData">
+      Status :
+      <input type ="checkbox" name ="chkStatus" />
+      <br/><br/>
+      Gender :
+      <input type = "radio" name="gender"
+      value ="Male"/> Male
+      <input type = "radio" name="gender"
+      value ="Female"/> Female
+       <br/><br/>
+       students :
+       <select name="student">
+       <option value ="sai">sai</option>
+         <option value ="laksh">laksh</option> 
+          <option value ="yash">yash</option>
+            <option value ="raghu">raghu</option>
+       </select>
+       Address :
+       <textarea rows="10" cols="50"></textarea>
+      </form>
+</body>
+</html>

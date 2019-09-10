@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="PlaceOrder.jsp">
+  <center>
+    Stock Id :
+    <input type="text" name="stid"/> <br/><br/>
+    
+    Ordered Quantity :
+     <input type="text" name="OQ"/> <br/><br/>
+     
+     <input type="submit" value="placeorder"/>
+  
+  </center>
+</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+package com.hcl.Exp;
+
+public class Div {
+	void display(int a,int b){
+		int c;
+		c=(a/b);
+		
+	}
+public static void main(String[] args) {
+	int a,b;
+	Div po=new Div();
+	po.display(8,4);
+	}
+}

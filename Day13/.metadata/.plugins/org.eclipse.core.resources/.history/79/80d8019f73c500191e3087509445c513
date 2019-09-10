@@ -1,0 +1,70 @@
+package com.hcl.library;
+
+import java.sql.Connection;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class libraryDaO {
+     public String logindao(String username,String password) {
+    	 Connection con=DaoConnection.getConnection();
+    	 String cmd="select*from libusers where username=? and password=?";
+    	 String result="";
+    	 try {
+			PreparedStatement pst=con.prepareStatement(cmd);
+			pst.setString(1, username);
+			pst.setString(2, password);
+			ResultSet rs=pst.executeQuery();
+			if(rs.next()) {
+				 result="login successfully";
+			}
+			else {
+				result="Invalid credentials";
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	 return result;
+     } 
+public List<Library> Searchdao(String searchtype,String input) {
+	List<Library> obj=new ArrayList<Library>();
+	Connection con=DaoConnection.getConnection();
+	PreparedStatement pst;
+	String cmd="";
+	if(searchtype.equals("id")) {
+		cmd="select * from books where id=?";		
+	}
+	if(searchtype.equals("name")) {
+		cmd="select * from books where name=?";		
+	}
+	
+	if(searchtype.equals("author")) {
+		cmd="select * from books where author=?";		
+	}
+	if(searchtype.equals("edition")) {
+		cmd="select * from books where edition=?";		
+	}
+	
+	if(searchtype.equals("totalbooks")) {
+		cmd="select * from books";		
+	}
+	try {
+		pst=con.prepareStatement(cmd);
+		pst.setString(1, input);
+		
+		
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	
+	
+}
+     
+}

@@ -1,0 +1,23 @@
+package com.hcl.inh;
+
+public class CustomString {
+		String name="yash";
+		String name1="raj";
+		public void length(String name,String name1)
+		{	
+		char[] arr=name.toCharArray();
+		char[] arr1=name1.toCharArray();
+		int i=0,j=0;
+		for(char a:arr){
+			i++;	
+		}
+		for (char c : arr1) {
+			j++;
+		}
+		}
+		public static void main(String[] args) {
+			CustomString obj=new CustomString();
+			obj.length("yash","sai");
+		}
+		}
+

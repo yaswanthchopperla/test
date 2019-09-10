@@ -1,0 +1,93 @@
+package com.hcl.library;
+
+import java.sql.Connection;
+
+
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class libraryDaO {
+     public String logindao(String username,String password) {
+    	 Connection con=DaoConnection.getConnection();
+    	 String cmd="select*from libusers where username=? and password=?";
+    	 String result="";
+    	 try {
+			PreparedStatement pst=con.prepareStatement(cmd);
+			pst.setString(1, username);
+			pst.setString(2, password);
+			ResultSet rs=pst.executeQuery();
+			if(rs.next()) {
+				 result="login successfully";
+			}
+			else {
+				result="Invalid credentials";
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	 return result;
+     } 
+public List<Library> Searchdao(String searchtype,String input) {
+	List<Library> obj=new ArrayList<Library>();
+	Connection con=DaoConnection.getConnection();
+	PreparedStatement pst;
+	String cmd="";
+	if(searchtype.equals("id")) {
+		cmd="select * from books where id=?";		
+	}
+	else if(searchtype.equals("name")) {
+		cmd="select * from books where name=?";		
+	}
+	
+	else if(searchtype.equals("author")) {
+		cmd="select * from books where author=?";		
+	}
+	else if(searchtype.equals("edition")) {
+		cmd="select * from books where edition=?";		
+	}
+	else if(searchtype.equals("dept")) {
+		cmd="select * from books where dept=?";		
+	}
+	else {
+		cmd="select * from books where name !=? or 1 = 1 ";
+	}
+	try {
+		pst=con.prepareStatement(cmd);
+		pst.setString(1, input);
+		ResultSet rs=pst.executeQuery();
+		
+		while(rs.next()) {
+			Library obj1=new Library();
+			obj1.setId(rs.getInt("id"));
+			obj1.setName(rs.getString("name"));
+			obj1.setAuthor(rs.getString("author"));
+			obj1.setEdition(rs.getString("edition"));
+			obj1.setDept(rs.getString("dept"));
+			obj1.setTotalbooks(rs.getInt("totalbooks"));
+			obj.add(obj1);
+		}
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return obj;
+}
+public String IssueBook(String username ,String[] id){
+	Connection con=DaoConnection.getConnection();
+	PreparedStatement pst;
+	for (String string : id) {
+		int id1=Integer.parseInt(id);
+		String cmd="select * from tranbook where username=?,id1=?";
+		pst=con.prepareStatement(cmd);
+		
+	}
+	
+	
+}
+     
+}

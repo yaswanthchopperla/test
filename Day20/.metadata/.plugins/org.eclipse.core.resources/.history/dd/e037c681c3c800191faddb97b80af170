@@ -1,0 +1,49 @@
+<%@page import="com.hcl.ems.Employee"%>
+<%@page import="com.hcl.ems.EmployeeBaL"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<% 
+	int emp_id=(int)session.getAttribute("empid");
+    Employee obj=EmployeeBaL.SearchEmployeebal(emp_id);
+%>
+<tr>
+<td>Employee Id :
+<%=obj.getEmp_id() %></td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<td>Employee Date of Join :
+<%=obj.getEmp_date_joined() %></td>
+</tr><br/><br/>
+
+<tr>
+<td>Employee Name :
+<%=obj.getEmp_name() %></td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<td>Employee Email :
+<%=obj.getEmp_email() %></td>
+</tr>
+
+<br/><br/>
+Employee MobileNo :
+<%=obj.getEmp_mob_no() %>
+<br/><br/>
+Employee Department Name :
+<%=obj.getEmp_dpt_name() %>
+<br/><br/>
+
+<br/><br/>
+Employee Manager ID :
+<%=obj.getMgr_id() %>
+<br/><br/>
+Employee Leave Balance :
+<%=obj.getEmp_leave_balance() %>
+
+
+</body>
+</html>

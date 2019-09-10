@@ -1,0 +1,18 @@
+package com.hcl.Exp;
+class First{
+	public void show(){
+		System.out.println("show first method");
+	}
+}
+class Second extends First{
+	public void show(){
+		System.out.println("show second method");
+	}
+}
+public class ExInt {
+	public static void main(String[] args) {
+   First ob1=new First();
+   Second ob2=(Second)ob1;
+   ob2.show();
+}
+}

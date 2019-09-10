@@ -1,0 +1,21 @@
+package com.hcl.java;
+class One{
+	public void show(){
+		System.out.println("show method from first class");
+	}
+}
+class Two extends One{
+	public void show(){
+		super.show();
+		System.out.println("show method from second class");
+	}
+}
+public class First {
+	public static void main(String[] args) {
+//		Two obj=new Two();
+//		obj.show();
+		One obj1=new Two();
+		obj1.show();
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.hcl.java;
+class Employ{
+	int empno;
+	String name;
+	double basic;
+	
+	
+}
+public class SupCon {
+
+}

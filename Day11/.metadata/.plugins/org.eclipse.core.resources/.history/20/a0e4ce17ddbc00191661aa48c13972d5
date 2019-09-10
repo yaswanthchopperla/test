@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body> 
+<font size = "12">
+<p>
+  This is text with Font size 12
+  </p>
+</font>
+<font size="12" color="blue">
+<p>
+this is text with font size 12 and color blue
+</p>
+</font>
+<font size="12" face="arial,garamond,tehoma " color="cyan">
+<p>
+this is text with font size 12 and color cyan and font name is tahoma
+</p>
+</font>
+</body>
+</html>

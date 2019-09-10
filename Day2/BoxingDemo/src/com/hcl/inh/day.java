@@ -1,0 +1,22 @@
+package com.hcl.inh;
+
+public class day {
+	public void calculate(){
+		String str="good";
+		 int i = 0;
+	      for(char c: str.toCharArray()) {
+	         i++;
+	      }
+	      System.out.println("Length of the given string ::"+i);    		  
+	}			
+	public static void main(String[] args) {
+		day obj=new day();
+		obj.calculate();
+	}
+	}
+
+
+
+
+
+

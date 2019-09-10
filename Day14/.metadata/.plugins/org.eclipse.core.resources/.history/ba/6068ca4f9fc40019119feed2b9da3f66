@@ -1,0 +1,49 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="com.hcl.jsp.DaoConnection"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+  Connection con=DaoConnection.getConnection();
+  String cmd="select max(deptno)+1 deptno from department";
+  PreparedStatement pst=con.prepareStatement(cmd);
+  ResultSet rs=pst.executeQuery();
+  int deptno=rs.getInt("deptno");
+%>
+<form method="get" action="addDept.jsp">
+  <center>
+    Dept No :
+    <input type="text" value=<%=deptno %> readonly="readonly" name="deptno"  /> <br/><br/>
+    Dept Name :
+    <input type="text" name="dname"/> <br/><br/>
+    Location :
+    <input type="text" name="loc"/> <br/><br/>
+    Head :
+    <input type="text" name="head"/> <br/><br/>
+     <input type="submit" value="add"/>
+  </center>
+</form>
+<%
+   if(request.getParameter("deptno")!=null) {
+	   con=DaoConnection.getConnection();
+	   cmd="inseret into department values(?,?,?)";
+	   pst=con.prepareStatement(cmd);
+	   rs=pst.executeQuery();
+	   pst.setString(1, request.getParameter("dname"));
+	   pst.setString(2, request.getParameter("loc"));
+	   pst.setString(3, request.getParameter("head"));
+	   pst.executeUpdate();
+   }
+
+
+%>
+</body>
+</html>

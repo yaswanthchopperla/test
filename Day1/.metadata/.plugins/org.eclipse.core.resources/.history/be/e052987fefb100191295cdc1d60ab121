@@ -1,0 +1,45 @@
+package com.hcl.obj;
+
+public class SbExample {
+	public StringBuilder show(int age,String name, String city, String course ){
+		StringBuilder sbError=new StringBuilder();
+		boolean isValid=true;
+		if(age<=20){
+			sbError.append("age must be greater than 20"+"\r\n");
+			isValid=false;
+		}
+		if(name.indexOf(' ')==-1){
+			sbError.append("name must contains both firstname and lastname");
+			isValid=false;
+		}
+		if(isValid==true){
+			sbError.append(age);
+			sbError.append(name);
+			sbError.append(city);
+			sbError.append(course);
+		}else{
+			
+			System.out.println(sbError);
+		}
+		
+		/*System.out.println("age is"+age);
+		System.out.println("name is"+name);
+		System.out.println("city is"+city);
+		System.out.println("course is"+course);*/
+	}
+
+	public static void main(String[] args) {
+		int age;
+		String name;
+		String city;
+		String course;
+		age=11;
+		name="ram";
+		course="java";
+		city="delhi";
+		new SbExample().show(age, name, city, course );
+		System.out.println(SbError);
+		
+	}
+
+}

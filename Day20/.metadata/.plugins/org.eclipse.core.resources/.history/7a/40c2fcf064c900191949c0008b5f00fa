@@ -1,0 +1,86 @@
+package com.hcl.ems;
+
+import java.io.PrintWriter;
+import java.sql.Connection;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+
+public class EmployDaO {
+   public static String logindao(int emp_id,String secretcode) {
+	   Connection con=DaoConnection.getConnection();
+	   String cmd="select * from Employlogin where emp_id=? and secretcode=?";
+	   String result="";
+	   PreparedStatement pst;
+	   try {
+		pst=con.prepareStatement(cmd);
+		pst.setInt(1, emp_id);
+		pst.setString(2, secretcode);
+		ResultSet rs=pst.executeQuery();
+		if(rs.next()) {
+			result="Login Successfully";
+		} else {
+			result="Invalid Credentials";
+		}
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	   return result;
+   }
+public Employee SearchEmployee(int emp_id) {
+	Connection con=DaoConnection.getConnection();
+	Employee obj=null;
+	String cmd="select * from employee where emp_id=?";
+	try {
+		PreparedStatement pst=con.prepareStatement(cmd);
+		pst.setInt(1, emp_id);
+		ResultSet rs=pst.executeQuery();
+		rs.next();
+		obj=new Employee();
+		obj.setEmp_id(rs.getInt("emp_id"));
+		obj.setEmp_name(rs.getString("emp_name"));
+		obj.setEmp_email(rs.getString("emp_email"));
+		obj.setEmp_mob_no(rs.getLong("emp_mob_no"));
+		obj.setEmp_dpt_name(rs.getString("emp_dpt_name"));
+		obj.setEmp_date_joined(rs.getDate("emp_date_joined"));
+		obj.setMgr_id(rs.getInt("EMP_MGR_ID"));
+		obj.setEmp_leave_balance(rs.getInt("emp_leave_balance"));
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return obj;
+}
+public LeaveHistory ApplyLeave(LeaveHistory obj) {
+	Connection con=DaoConnection.getConnection();
+    Date dt=new Date();
+    SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+     String lea_applied_on=sdf.format(dt);
+	String cmd="insert into Leave_History (lea_start_date,lea_end_date,lea_no_of_days,lea_reason,lea_type,lea_applied_on,emp_id,lea_status)"
+			+ "values(?,?,?,?,?,?,?,?)";
+	PreparedStatement pst;
+	try {
+		pst=con.prepareStatement(cmd);
+		pst.setString(1,obj.getLea_start_date());
+		pst.setString(2, obj.getLea_end_date());
+		pst.setInt(3, obj.getLea_No_of_days());
+		pst.setString(4, obj.getLea_reason());
+		pst.setString(5, obj.getLea_type());
+		pst.setString(6,lea_applied_on);
+		pst.setInt(7, obj.getEmp_id());
+		pst.setString(8, "Approved");
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return LeaveHistory;
+}
+
+}

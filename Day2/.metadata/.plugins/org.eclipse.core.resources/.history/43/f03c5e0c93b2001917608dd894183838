@@ -1,0 +1,8 @@
+package com.hcl.boxing;
+import java.util.scanner*;
+public class Test {
+	int a,b;
+	a=1;
+	b=2;
+
+}

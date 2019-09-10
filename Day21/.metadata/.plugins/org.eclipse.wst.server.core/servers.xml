@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v8.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v8.0 Server at localhost" name="Tomcat v8.0 Server at localhost" runtime-id="Apache Tomcat v8.0" server-type="org.eclipse.jst.server.tomcat.80" server-type-id="org.eclipse.jst.server.tomcat.80" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="8">
+    <list key="modules" value0="HelloWorld1::org.eclipse.jst.j2ee.server:HelloWorld1::jst.web::2.3" value1="Calc::org.eclipse.jst.j2ee.server:Calc::jst.web::2.3" value2="FullName::org.eclipse.jst.j2ee.server:FullName::jst.web::2.3" value3="SpringNameList::org.eclipse.jst.j2ee.server:SpringNameList::jst.web::2.3" value4="Login::org.eclipse.jst.j2ee.server:Login::jst.web::2.3" value5="EmployDetails::org.eclipse.jst.j2ee.server:EmployDetails::jst.web::2.3" value6="DeptDetails::org.eclipse.jst.j2ee.server:DeptDetails::jst.web::2.3"/>
+  </server>
+</servers>

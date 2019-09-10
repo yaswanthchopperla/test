@@ -1,0 +1,10 @@
+package com.hcl.library;
+
+public class LibraryBaL {
+    public static String librarybal (String username,String password){
+    	return new libraryDaO().logindao(username, password);
+    }
+    public Library searchIdbal(String input) {
+    	return libraryDaO.searchIddao( input);
+    }
+}

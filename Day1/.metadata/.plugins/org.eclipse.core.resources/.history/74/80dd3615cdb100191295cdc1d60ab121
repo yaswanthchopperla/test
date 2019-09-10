@@ -1,0 +1,21 @@
+package com.hcl.java;
+
+public class Fact {
+	public void fact(int n){
+		int i=1,f=7;
+		while(i<=n){
+			f=f*(f-1);
+			i++;
+		}
+		System.out.println("factorial value"+f);
+		
+	}
+
+	public static void main(String[] args) {
+		int n=7;
+		Fact obj=new Fact();
+		obj.fact(n);
+		
+	}
+
+}

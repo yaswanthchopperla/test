@@ -1,0 +1,38 @@
+package com.hcl.intf;
+interface Itraining{
+	void name();
+	void email();
+}
+class Hema implements Itraining{
+	@Override
+	public void name() {
+		System.out.println("name is hema");
+	}
+	@Override
+	public void email(){
+	System.out.println("hema2gmail.com");
+	}
+}
+class Keerthana implements Itraining{
+	@Override
+	public void name(){
+		System.out.println("name is keerthana");
+	}
+	@Override
+	public void email() {
+		System.out.println("keerthana@gmail.com");	
+	}
+}
+public class IntDemo {
+	public static void main(String[] args) {
+		Itraining[] arr=new Itraining[]{
+				new Hema(),new Keerthana()
+		};
+		for (Itraining i : arr) {
+			i.name();
+			i.email();
+			
+		}
+	}
+
+}

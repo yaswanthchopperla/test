@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+function show() {
+	var today = new Date();
+	var Fullyear =today.getFullYear();
+	var Future = new Date("December 31," + Fullyear);
+	var diff = Future.getTime() - today.getTime();
+	var  days = Math.ceil(diff/(1000*60*60*24));
+	var res = "only <u> "+ days + "</u> days left till Newyear Day!";
+	document.getElementById("res").innerHTML = res;
+}

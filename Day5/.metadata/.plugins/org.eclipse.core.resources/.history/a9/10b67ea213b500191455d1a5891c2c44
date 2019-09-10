@@ -1,0 +1,13 @@
+package java3;
+
+import java.util.ResourceBundle;
+
+public class PropDemo {
+public static void main(String[] args) {
+	ResourceBundle rb=ResourceBundle.getBundle("hcltraning");
+	System.out.println(rb.getString("Welcome"));
+	System.out.println(rb.getString("Lunch"));
+	System.out.println(rb.getString("Break"));
+	System.out.println(rb.getString("Logout"));
+}
+}

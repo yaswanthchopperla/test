@@ -1,0 +1,5 @@
+package com.hcl.exp;
+
+public class NumberZeroException {
+
+}

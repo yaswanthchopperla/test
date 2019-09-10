@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>SessionManagement</display-name>
+  <welcome-file-list>
+    <welcome-file>name.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>FirstServlet</display-name>
+    <servlet-name>FirstServlet</servlet-name>
+    <servlet-class>com.hcl.session.FirstServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FirstServlet</servlet-name>
+    <url-pattern>/FirstServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FirstServlet1</display-name>
+    <servlet-name>FirstServlet1</servlet-name>
+    <servlet-class>com.hcl.session.FirstServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FirstServlet1</servlet-name>
+    <url-pattern>/FirstServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SecondServlet</display-name>
+    <servlet-name>SecondServlet</servlet-name>
+    <servlet-class>com.hcl.session.SecondServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SecondServlet</servlet-name>
+    <url-pattern>/SecondServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Thirdservlet</display-name>
+    <servlet-name>Thirdservlet</servlet-name>
+    <servlet-class>com.hcl.session.Thirdservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Thirdservlet</servlet-name>
+    <url-pattern>/Thirdservlet</url-pattern>
+  </servlet-mapping>
+</web-app>

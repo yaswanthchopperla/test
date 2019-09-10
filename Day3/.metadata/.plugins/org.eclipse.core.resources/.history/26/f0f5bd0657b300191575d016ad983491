@@ -1,0 +1,38 @@
+package com.hcl.java;
+class Employ{
+	int empno;
+	String name;
+	double basic;
+	public Employ(int empno, String name, double basic) {
+		super();
+		this.empno = empno;
+		this.name = name;
+		this.basic = basic;
+	}
+	@Override
+	public String toString() {
+		return "Employ [empno=" + empno + ", name=" + name + ", basic=" + basic + "]";
+	}
+	
+}
+class Amit extends Employ{
+
+	public Amit(int empno, String name, double basic) {
+		super(empno, name, basic);	
+	}	
+}
+class Vinod extends Employ{
+
+	public Vinod(int empno, String name, double basic) {
+		super(empno, name, basic);	
+	}
+}
+public class SupCon {
+	public static void main(String[] args) {
+		Employ e1=new Amit(1,"amit",5467);
+		Employ e2=new Vinod(2,"vinod",65745);
+		System.out.println(e1);
+		System.out.println(e2);
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.hcl.boxing;
+
+public class Cricket {
+	int score;
+	public void incr(int x){
+	score+=x;
+	System.out.println(score);
+	}
+	public static void main(String[] args) {
+		Cricket fb=new Cricket();
+		Cricket sb=new Cricket();
+		Cricket ext=new Cricket();
+		fb.incr(0);
+		sb.incr(45);
+		ext.incr(67);
+		Cricket obj=new Cricket();
+		obj.incr(x);
+		
+	}
+
+}

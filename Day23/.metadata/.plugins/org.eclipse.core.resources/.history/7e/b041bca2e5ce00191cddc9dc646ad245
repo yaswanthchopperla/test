@@ -1,0 +1,18 @@
+package com.hcl.college;
+
+
+import javax.management.Query;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+public class FeedbackCrud {
+    public static String feedbackId(){
+    	SessionFactory sf=HibernateUtil.getConnection();
+    	Session s=sf.openSession();
+    	Query q=s.createQuery("select max(fid) from Feedback");
+    	
+    	
+    }
+    
+}

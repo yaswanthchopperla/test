@@ -1,0 +1,4 @@
+127.0.0.1 - - [03/Sep/2019:18:28:15 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [03/Sep/2019:18:28:18 +0530] "GET /DepartmentCrudHib/DeptShow.jsp HTTP/1.1" 200 2365
+0:0:0:0:0:0:0:1 - - [03/Sep/2019:18:28:23 +0530] "GET /DepartmentCrudHib/DeptUpdate.jsp?deptno=3 HTTP/1.1" 200 621
+0:0:0:0:0:0:0:1 - - [03/Sep/2019:18:28:29 +0530] "GET /DepartmentCrudHib/DeptUpdate.jsp?deptno=3&dname=dsfds&loc=dsfs&head=dfse HTTP/1.1" 200 2359

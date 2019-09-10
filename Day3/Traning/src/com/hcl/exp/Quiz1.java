@@ -1,0 +1,17 @@
+package com.hcl.exp;
+class c1{
+	static void show(){
+		System.out.println("welcome");
+	}
+}
+class c2 extends c1{
+	 static void show(){
+		System.out.println("bye");
+	}
+}
+public class Quiz1 {
+    public static void main(String[] args) {
+		c2 ob=new c2();
+		ob.show();
+	}
+}

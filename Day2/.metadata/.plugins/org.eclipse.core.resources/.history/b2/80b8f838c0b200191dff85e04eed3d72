@@ -1,0 +1,29 @@
+package com.hcl.inh;
+class Bing{
+	public int a;
+	private int b;
+	protected  int c;
+	 int d;
+	public void add(){
+		a++;
+		System.out.println(a);
+	}
+}
+class Sap extends Bing{
+	public void mul(){
+		c=a--;
+		b++;
+		d++;
+		System.out.println(c);
+		System.out.println(b);
+		System.out.println(d);
+	}
+}
+public class Task {
+	public static void main(String[] args) {
+		Sap obj=new Sap();
+		obj.add();
+		obj.mul();
+	}
+
+}

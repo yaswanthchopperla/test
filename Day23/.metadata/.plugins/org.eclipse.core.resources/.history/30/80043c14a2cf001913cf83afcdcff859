@@ -1,0 +1,8 @@
+package com.hcl.hotel;
+
+public class Room {
+    private String RoomId;
+    private String type;
+    private String status;
+    private int CostPerDay;
+}

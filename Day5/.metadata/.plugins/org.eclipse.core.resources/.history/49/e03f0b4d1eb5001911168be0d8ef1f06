@@ -1,0 +1,12 @@
+package com.hcl.collections;
+
+import java.util.Comparator;
+
+public class NameComparator implements Comparator {
+@Override
+public int compare(Object arg0, Object arg1) {
+	Employ e1=(Employ)arg0;
+	Employ e2=(Employ)arg1;
+	return e2.name.compareTo(e1.name);
+}
+}

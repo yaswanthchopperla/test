@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+function gotCursor() {
+	//alert("Cursor placed......");
+	frmNameform.firstname.value="";
+}
+function lostCursor() {
+	alert("Cursor left Current control.....");
+	frmNameform.fullname.value="frmNameform.firstname.value+frmNameform.lastname.value";
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body
+<form method="get" action="login.jsp">
+ <center>
+ Emp_ID :
+  <input type="text" name="emp_id"/>
+ Secret Code :
+ <input type="password" name="secretcode"/>
+ 
+ <input type="submit" value="login"/>
+  
+ 
+ 
+ </center>
+
+</form>
+</body>
+</html>

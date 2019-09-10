@@ -1,0 +1,15 @@
+package com.hcl.java;
+
+public class Attendance {
+	public static void show(String...name){
+		for(String s:name){
+			System.out.println(s + " ");
+		}
+		System.out.println();
+	}
+public static void main(String[] args) {
+	show();
+	show("sai","kumar","tushar");
+	show("sai","satya","mahesh");
+}
+}

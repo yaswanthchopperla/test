@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="post" action="c">
+ <center>
+  Account No :
+  <input type="text" name="accno"/> <br/><br/>
+  City :
+  <input type="text" name="city"/> <br/><br/>
+  state :
+  <input type="text" name="state"/> <br/><br/>
+  <input type="submit" value="update"/>
+ 
+ </center>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+package com.hcl.java;
+
+public class eorO {
+	public void check(int a){
+		if(a%2==0){
+			System.out.println("number is even");
+		}else{
+			System.out.println("number is negative");
+		}
+	}
+
+	public static void main(String[] args) {
+		int a=20;
+		new eorO().check(a);
+	
+
+	}
+
+}

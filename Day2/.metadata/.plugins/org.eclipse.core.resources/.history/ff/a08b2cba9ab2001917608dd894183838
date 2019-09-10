@@ -1,0 +1,24 @@
+package com.hcl.boxing;
+
+public class timeZone {
+	int t1,t2,t3;
+	public timeZone(int t1, int t2, int t3) {
+		super();
+		this.t1 = t1;
+		this.t2 = t2;
+		this.t3 = t3;
+	}
+	@Override
+	public String toString() {
+		return "timeZone [t1=" + t1 + ", t2=" + t2 + "]";
+	}
+	public void add(){
+		t3=t1+t2;
+		System.out.println(t3);
+	}
+	public static void main(String[] args) {
+		
+
+	}
+
+}

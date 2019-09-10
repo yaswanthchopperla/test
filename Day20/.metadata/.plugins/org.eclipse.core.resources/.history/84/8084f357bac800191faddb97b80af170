@@ -1,0 +1,7 @@
+package com.hcl.ems;
+
+public class EmployeeBaL {
+     public static Employee SearchEmployeebal(int emp_id) {
+    	 return new EmployDaO().SearchEmployee(emp_id);
+     }
+}

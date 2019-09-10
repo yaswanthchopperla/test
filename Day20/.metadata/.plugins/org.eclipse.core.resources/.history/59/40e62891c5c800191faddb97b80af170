@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+Start Date :
+<input type="date" name="startdate"/> <br/><br/>
+End Date :
+<input type="date" name="enddate"/> <br/><br/>
+No of Days:
+<input type="text" name="noofdays"/> <br/><br/>
+Leave Type :
+<input type="text" name="leavetype"/> <br/><br/>
+Leave Reason :
+<input type="text" name="leavereason"/> <br/><br/>
+
+<input type="Submit" value="apply" onclick="ApplyLeave.jsp"/>
+<input type="button" value="clear"/>
+
+<%
+   String startdate=request.getParameter("startdate");
+   String enddate=request.getParameter("enddate");
+   String noofdays=request.getParameter("noofdays");
+  
+
+%>
+
+</body>
+</html>

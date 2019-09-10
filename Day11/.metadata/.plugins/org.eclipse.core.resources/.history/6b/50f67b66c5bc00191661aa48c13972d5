@@ -1,0 +1,52 @@
+package com.hcl.threads;
+class TableShow { 
+	void Show(int n) { 
+		int p;
+		for(int i = 1;i<0;i++){
+			p = n*i;
+			System.out.println(n+ " *" +i+ " = "+p);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}
+class Tab1 extends Thread { 
+	TableShow t;
+    Tab1(TableShow t){
+    	this.t = t;
+    }
+    @Override
+    public void run() {
+    	t.Show(12);
+    }
+}
+class Tab2 extends Thread { 
+	TableShow t;
+    Tab2(TableShow t){
+    	this.t = t;
+    }
+    @Override
+    public void run() {
+    	t.Show(5);
+    }
+}
+class Tab3 extends Thread { 
+	TableShow t;
+    Tab3(TableShow t){
+    	this.t = t;
+    }
+    @Override
+    public void run() {
+    	t.Show(19);
+    }
+}
+public class MTabDemo {
+	public static void main(String[] args) {
+		System.out.println("Hi");
+	}
+
+}

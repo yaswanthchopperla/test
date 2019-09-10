@@ -1,0 +1,24 @@
+package com.hcl.exp;
+/**
+ * program about try catch.
+ * @author yaswanth.
+ *
+ */
+
+public class ArrEx { 
+  /**
+  * try catch.
+  * @param args arr.
+  */
+  public static void main(String[] args) {  
+    try { 
+      int[] a = new int[]{12,5};
+      a[10] = 77;
+    } catch (ArrayIndexOutOfBoundsException e) { 
+      System.out.println("array size is less");
+    } catch (Exception e) { 
+   // TODO Auto-generated catch block
+	  e.printStackTrace();
+	}	
+  }
+}

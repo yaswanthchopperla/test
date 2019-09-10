@@ -1,0 +1,6 @@
+package com.hcl.threads;
+
+public class Snippet {
+			Thread t1 = new Thread(new ListDemo());
+}
+

@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+function gotCursor() {
+	alert("Cursor placed......");
+	frmData.firstName.value="";
+}
+function lostCursor() {
+	alert("Cursor left Current control.....");
+	frmData.lastName.value="Mohammad";
+}

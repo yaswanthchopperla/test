@@ -1,0 +1,38 @@
+package com.hcl.college;
+
+
+
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+public class FeedbackCrud {
+    public static String feedbackId(){
+    	SessionFactory sf=HibernateUtil.getConnection();
+    	Session s=sf.openSession();
+    	Query q=s.createQuery("select max(fid)  from Feedback");
+    	List<Feedback> lst=q.list();
+    	String fid="";
+    	Feedback f=lst.get(0);
+    	if(f==null) {
+    		fid="C001";
+    	} else {
+    	fid=f.getFid();
+		int id=Integer.parseInt(fid.substring(1));
+		id++;
+		String formatted = String.format("%03d", id);
+		fid = "C"+formatted;	
+    }
+    return fid;
+    }
+public static List<Subjects> searchByInstructor() {
+	SessionFactory sf=HibernateUtil.getConnection();
+	Session s=sf.openSession();
+	Query q=s.createQuery("select instructor  from Subjects");
+	List<Subjects> lst=q.list();
+    return lst;
+}
+}

@@ -1,0 +1,24 @@
+package com.hcl.boxing;
+
+public class Employcheck {
+	public Employ showEmploy(int empno){
+		Employ employ;
+		if(empno==1){
+			employ=new Employ();
+			employ.empno=100;
+			employ.name="anubhav";
+			employ.basic=445;
+		}
+		if(empno==3){
+			employ=new Employ();
+			employ.empno=109;
+			employ.name="anubhav arh";
+			employ.basic=446;
+		}
+		return employ;
+	}
+	public static void main(String[] args) {
+		
+	}
+
+}

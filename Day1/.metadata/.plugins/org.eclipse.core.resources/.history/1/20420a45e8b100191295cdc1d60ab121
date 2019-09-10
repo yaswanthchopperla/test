@@ -1,0 +1,15 @@
+package com.hcl.obj;
+
+public class Demo {
+    int x;
+	public static void main(String[] args) {
+	Demo obj=new Demo();
+	obj.x=12;
+	Demo obj2=obj;
+	obj2.x=13;
+	System.out.println(obj.x);
+	
+
+	}
+
+}

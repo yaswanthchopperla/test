@@ -1,0 +1,7 @@
+package com.hcl.collections;
+
+public class NameComparator implements Comparator {
+public static void main(String[] args) {
+	
+}
+}

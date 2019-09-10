@@ -1,0 +1,15 @@
+package com.hcl.library;
+
+import java.util.List;
+
+public class LibraryBaL {
+    public static String librarybal (String username,String password){
+    	return new libraryDaO().logindao(username, password);
+    }
+    public static List<Library> searchbal(String searchtype,String input) {
+    	return new libraryDaO().Searchdao(searchtype,input);
+    }
+    public static String issuebookbal(String username,String[] id) {
+    	return new libraryDaO().IssueBookdao(username, id);
+    }
+}
