@@ -1,0 +1,42 @@
+package com.hcl.employee.controller;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.hcl.employee.model.Employee;
+import com.hcl.employee.service.EmployeeService;
+
+@Controller
+public class EmployeeController {
+    @Autowired
+    private EmployeeService es;
+	
+	@RequestMapping(value="/")
+   public ModelAndView listemployee(ModelAndView model) {
+	   List<Employee> listemployee=es.getAllEmployees();
+	   model.addObject("searchemployee",new Employee());
+	   model.addObject("listemployee",listemployee);
+	   model.setViewName("home");
+	   return model;
+   }
+	
+	@RequestMapping(value = "/search", method = RequestMethod.POST)
+   public ModelAndView searchEmployee(ModelAndView model,@ModelAttribute Employee searchemployee) {
+		   List<Employee> listemployee=es.getAllEmployees();
+           listemployee = listemployee.stream().filter((var)-> var.getEmpname().startsWith(searchemployee.getEmpname())).collect(Collectors.toList());
+           listemployee = listemployee.stream().filter((var)-> var.getBand()==searchemployee.getBand()).collect(Collectors.toList());
+           model.addObject("searchemployee",searchemployee);
+    	   model.addObject("listemployee",listemployee);
+    	   model.setViewName("home");
+    	   return model;
+	}
+	
+  
+}

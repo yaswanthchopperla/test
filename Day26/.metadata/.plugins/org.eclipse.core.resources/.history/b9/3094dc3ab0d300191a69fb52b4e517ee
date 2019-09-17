@@ -1,0 +1,9 @@
+package com.hcl.student.dao;
+
+import com.hcl.student.model.Student;
+
+public interface StudentDao {
+    public boolean addStudent(Student s);
+    public boolean update();
+    public Student get();
+}

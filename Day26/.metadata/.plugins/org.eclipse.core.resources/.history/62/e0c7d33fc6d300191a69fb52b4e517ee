@@ -1,0 +1,38 @@
+package com.hcl.student.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.hcl.student.model.Student;
+import com.hcl.student.service.StudentService;
+
+
+@Controller
+public class StudentController {
+	
+  @RequestMapping(value="/home",method=RequestMethod.GET)
+  public String home(Model model){
+  model.addAttribute("Student",new Student());
+  return "addStudent";
+  }
+  @Autowired
+  StudentService ss;
+  @RequestMapping(value="/addStudent",method=RequestMethod.GET)
+  public String addStudent(Student s,Model model){
+	  ss.addStudent(s);
+	  return "StudentSuccess";
+  }
+  @RequestMapping(value="/getStudent",method=RequestMethod.GET)
+  public String getStudent(Model model){
+	  return "getStudent";
+  }
+  @RequestMapping(value="/updateStudent",method=RequestMethod.GET)
+  public String updateStudent(Model model){
+	  return "updateStudent";
+  }
+  
+
+}

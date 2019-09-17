@@ -1,0 +1,11 @@
+package com.hcl.streams;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ForEachDemo1 {
+    public static void main(String[] args) {
+		List<Employee> lst=new ArrayList<Employee>();
+		lst.add(new 10,"yaswanth",45000,'E');
+	}
+}

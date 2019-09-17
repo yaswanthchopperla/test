@@ -1,0 +1,21 @@
+package com.hcl.employee.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hcl.employee.DAO.EmployeeDAO;
+import com.hcl.employee.DAO.EmployeeDAOImpl;
+import com.hcl.employee.model.Employee;
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+    @Autowired
+    private EmployeeDAO ed;
+	
+	@Override
+	public List<Employee> getAllEmployees() {
+	  return ed.getAllEmployees(); 	
+	}
+
+}

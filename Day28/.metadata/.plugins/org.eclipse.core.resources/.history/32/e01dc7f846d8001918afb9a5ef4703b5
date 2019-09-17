@@ -1,0 +1,7 @@
+package com.hcl.MRef;
+
+public class MethodRefernceStaticMain {
+     public static void main(String[] args) {
+		MethodRefernceStatic static = (a) -> {return "Welcome" + a;};
+	}
+}

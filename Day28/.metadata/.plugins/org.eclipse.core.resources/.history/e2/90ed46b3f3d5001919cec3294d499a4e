@@ -1,0 +1,15 @@
+package com.hcl.lambda;
+
+public class WithLamba {
+    public static void main(String[] args) {
+		MyInterface1 my=(var1,var2)->{return (var1+var2);};
+		int result=my.add(23, 47);
+		System.out.println(result);
+		
+		MyInterface1 my1=(var1,var2)-> (var1+var2);
+		int result1=my1.add(23, 47);
+		System.out.println(result1);
+		
+		
+	}
+}

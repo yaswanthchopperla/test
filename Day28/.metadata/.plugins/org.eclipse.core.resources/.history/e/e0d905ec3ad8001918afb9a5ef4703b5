@@ -1,0 +1,11 @@
+package com.hcl.lambda;
+
+public class MultipleMethods {
+   public static void main(String[] args) {
+	   String res="yaswanth";
+	   MultipleMethodsI mi=(res)->{System.out.println("mi");};
+	   return mi;
+	   MultipleMethodsI.add(int a, int b);
+	   
+}
+}

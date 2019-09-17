@@ -1,0 +1,14 @@
+package com.hcl.student.dao;
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class StudentDaoImpl {
+    public boolean addStudent() {
+    	SessionFactory sf=HibernateUtil.getConnection();
+    	Session s=sf.openSession();
+    			
+    }
+}

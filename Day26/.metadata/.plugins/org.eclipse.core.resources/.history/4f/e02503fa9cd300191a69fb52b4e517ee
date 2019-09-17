@@ -1,0 +1,13 @@
+package com.hcl.student.model;
+
+import java.util.Date;
+
+public class Student {
+   private int RollNum;
+   private String sName;
+   private int Age;
+   private String Gender;
+   private String Country;
+   private Date DateofJoin;
+   private int FinalScore;
+}

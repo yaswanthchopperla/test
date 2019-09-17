@@ -1,0 +1,9 @@
+package com.hcl.lambda;
+
+public class MaxOfTwo {
+  public static void main(String[] args) {
+	MyMax my=(c,d)->{int max=c>d?c:d;return max;};
+	int result=my.max(56, 89);
+	System.out.println(result);
+}
+}

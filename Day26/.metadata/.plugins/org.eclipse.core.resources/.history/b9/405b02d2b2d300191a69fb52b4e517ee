@@ -1,0 +1,22 @@
+package com.hcl.student.service;
+
+import com.hcl.student.model.Student;
+
+public class StudentServiceImpl implements StudentService {
+
+	public boolean addStudent(Student s) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean update(Student s) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public Student get(int RollNum) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

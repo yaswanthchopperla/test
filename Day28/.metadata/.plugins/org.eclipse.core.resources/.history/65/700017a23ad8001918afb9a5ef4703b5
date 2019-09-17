@@ -1,0 +1,9 @@
+package com.hcl.lambda;
+
+public class MultipleMethods {
+   public static void main(String[] args) {
+	   MultipleMethodsI mi=( String res)->{System.out.println("yaswanth");};
+	   MultipleMethodsI.add(num1, num2);
+	   
+}
+}

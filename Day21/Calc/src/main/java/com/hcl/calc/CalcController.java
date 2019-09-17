@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CalcController {
  @RequestMapping("/calc")
+ 
  public ModelAndView calc(HttpServletRequest req,HttpServletResponse res) {
 	 int a,b,c;
 	 a=Integer.parseInt(req.getParameter("firstno"));

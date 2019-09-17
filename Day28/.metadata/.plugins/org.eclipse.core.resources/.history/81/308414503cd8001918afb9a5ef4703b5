@@ -1,0 +1,19 @@
+package com.hcl.lambda;
+
+public class MultipleMethods implements MultipleMethodsI {
+   public static void main(String[] args) {
+	   String res="yaswanth";
+	   MultipleMethodsI mi=(res1)->{System.out.println("res");return res;};
+	   mi.sayHello(res);
+	  
+	   System.out.println(MultipleMethodsI.add(13, 45));
+	   
+	   System.out.println(new MultipleMethods().defaultMethod(45));
+	   
+	   MultipleMethodsI myinterface1 =(name) ->(name +"World");
+	   System.out.println(myinterface1.sayHello("hello'));
+	   
+	   
+   
+   }
+}

@@ -1,0 +1,6 @@
+package com.hcl.MRef;
+@FunctionalInterface
+public interface EmployeeInterface {
+    public Employee getEmployee(int empNo,String empName);
+    
+}

@@ -1,0 +1,27 @@
+package com.hcl.student.dao;
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.hcl.student.model.Student;
+
+public class StudentDaoImpl implements StudentDao {
+
+	public boolean addStudent(Student s) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean update(Student s) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public Student get(int RollNum) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+   
+}

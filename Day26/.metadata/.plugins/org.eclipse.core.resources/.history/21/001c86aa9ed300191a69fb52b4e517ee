@@ -1,0 +1,7 @@
+package com.hcl.student.dao;
+
+public interface StudentDao {
+    public void add(){
+    	
+    }
+}

@@ -1,0 +1,11 @@
+package com.hcl.MRef;
+
+public class EmployeeMain {
+	public static void main(String[] args) {
+    Employee employee=new Employee();
+    EmployeeInterface e1=Employee::new;
+    System.out.println(e1.getEmployee(3, "yaswanth"));
+    
+    
+}
+}

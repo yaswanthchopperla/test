@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.hcl.lambda.MyInterface"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.MyInterface1"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.MyMax"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.DefaultDemo"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.Defalut"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.StaticDemo"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.DemoS"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.MultipleMethodsI"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.MultipleMethods"/>
+<fullyQualifiedTypeName name="java.util.function.BiFunction"/>
+<fullyQualifiedTypeName name="com.hcl.FIM.Calculator"/>
+<fullyQualifiedTypeName name="com.hcl.MRef.MyInterface"/>
+<fullyQualifiedTypeName name="java.util.function.Consumer"/>
+<fullyQualifiedTypeName name="com.hcl.MRef.MethodRefernceStatic"/>
+<fullyQualifiedTypeName name="com.hcl.MRef.InstanceMethodReference"/>
+<fullyQualifiedTypeName name="com.hcl.MRef.InstanceInterface"/>
+<fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+<fullyQualifiedTypeName name="com.hcl.MRef.EmployeeInterface"/>
+<fullyQualifiedTypeName name="com.hcl.MRef.Inteface1"/>
+<fullyQualifiedTypeName name="com.hcl.MRef.Interface2"/>
+<fullyQualifiedTypeName name="com.hcl.MRef.Employee"/>
+</qualifiedTypeNameHistroy>
