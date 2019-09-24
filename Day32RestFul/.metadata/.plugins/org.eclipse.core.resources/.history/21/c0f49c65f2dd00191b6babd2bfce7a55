@@ -1,0 +1,8 @@
+package com.hcl.json.dao;
+
+import com.hcl.json.model.Employee;
+
+public interface EmployeeDao {
+	public Employee[] getAllEmployees();
+
+}

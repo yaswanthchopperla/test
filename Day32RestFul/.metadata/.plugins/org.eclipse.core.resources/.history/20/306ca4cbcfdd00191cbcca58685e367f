@@ -1,0 +1,39 @@
+package com.hcl.json;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class JsonRead {
+    public static void main(String[] args) {
+	   JSONParser p=new JSONParser();
+	   try {
+		FileReader f=new FileReader("C:/Users/coalesce/Downloads/Employee.json");
+		Object obj=p.parse(f);
+		JSONObject j=(JSONObject) obj;
+		    
+			int empno=(Integer) j.get("empno");
+			String empname=(String) j.get("empname");
+			int Salary=(Integer) j.get("Salary");
+			String band=(String) j.get("band");
+			String dateofjoin=(String) j.get("Dateofjoin");
+			System.out.println(empno + "--" +empname + "--" + Salary + "--" + band + "--" + dateofjoin);
+		    
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+    }
+}

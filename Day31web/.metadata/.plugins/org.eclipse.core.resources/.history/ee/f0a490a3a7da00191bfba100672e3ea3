@@ -1,0 +1,7 @@
+package com.hcl.web;
+
+public class Details {
+   public String getName(){
+	   return "yaswanth","A51823112","yash@gmail.com";
+   }
+}

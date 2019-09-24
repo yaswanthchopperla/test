@@ -1,0 +1,8 @@
+package com.hcl.json;
+
+public class Employee {
+   private int empno;
+   private String empname;
+   private float salary;
+   private char
+} 

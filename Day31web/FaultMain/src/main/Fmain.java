@@ -1,0 +1,21 @@
+package main;
+
+import java.rmi.RemoteException;
+
+import com.y.HelloWorldProxy;
+import com.y.MissingName;
+
+public class Fmain {
+ public static void main(String[] args) {
+	HelloWorldProxy p=new HelloWorldProxy();
+	try {
+		System.out.println(p.sayHelloWorld("yaswanth hai"));
+	} catch (MissingName e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (RemoteException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+}

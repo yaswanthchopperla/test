@@ -1,0 +1,20 @@
+package com.hcl.JSON;
+
+import java.util.Scanner;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class JsonArrayObject {
+   public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	JSONArray arr=new JSONArray();
+	for (int i = 0; i < 3; i++) {
+		JSONObject obj=new JSONObject();
+		obj.put("Name",sc.nextLine());
+		obj.put("Age", sc.nextInt());
+		obj.put("Salary", Integer.parseInt(sc.nextLine());
+				
+	}
+}
+}

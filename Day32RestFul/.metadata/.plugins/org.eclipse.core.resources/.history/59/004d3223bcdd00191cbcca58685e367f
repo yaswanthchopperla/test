@@ -1,0 +1,13 @@
+package com.hcl.JSON;
+
+import org.json.simple.JSONArray;
+
+public class JsonArray {
+  public static void main(String[] args) {
+	JSONArray ar=new JSONArray();
+	ar.add("sonoo");    
+	  ar.add(new Integer(27));    
+	  ar.add(new Double(600000));   
+	  System.out.print(ar);  
+}
+}

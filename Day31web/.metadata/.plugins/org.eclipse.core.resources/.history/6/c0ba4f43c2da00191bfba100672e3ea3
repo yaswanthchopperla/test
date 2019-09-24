@@ -1,0 +1,5 @@
+package com.javacodegeeks.examples.jaxWsAnnotation.Main;
+
+public class WsAnnotationWebServiceMain {
+
+}

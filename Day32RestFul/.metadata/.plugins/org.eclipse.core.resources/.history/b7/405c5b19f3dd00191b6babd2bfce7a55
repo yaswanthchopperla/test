@@ -1,0 +1,7 @@
+package com.hcl.json.service;
+
+import com.hcl.json.model.Employee;
+
+public interface EmployeeService {
+	public List<Employee> getAllEmployees();
+}

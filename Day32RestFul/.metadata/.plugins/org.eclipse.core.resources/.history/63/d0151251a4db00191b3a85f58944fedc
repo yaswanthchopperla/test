@@ -1,0 +1,56 @@
+package com.journaldev.jaxrs.dao;
+
+import java.util.List;
+
+import javax.ws.rs.core.Response;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.journaldev.jaxrs.model.Employee;
+
+public class EmployeeDAOImpl implements EmployeeDAO {
+
+	@Override
+	public String addEmployee(Employee e) {
+        SessionFactory sf=HibernateUtil.getConnection();
+        Session s=sf.openSession();
+        Transaction t=s.beginTransaction();
+        s.save(e);
+        t.commit();
+        return "Employee added Successfully";
+		
+	}
+
+	@Override
+	public String deleteEmployee(int id) {
+		SessionFactory sf=HibernateUtil.getConnection();
+		Session s=sf.openSession();
+		s.delete(employee);
+		Query q=s.createQuery("from employeerest where id="+id);
+		List<Employee> lst=q.list();
+		Transaction t=s.beginTransaction();
+		s.delete(lst.get(0));
+		t.commit();
+		return "Employee Deleted Successfully";
+	}
+
+	@Override
+	public Employee getEmployee(int id) {
+		SessionFactory sf=HibernateUtil.getConnection();
+		Session s=sf.openSession();
+		Query q=s.createQuery("from employeerest where id="+id);
+		List<Employee> lst=q.list();
+		Employee d = lst.get(0);
+		return d;
+	}
+
+	@Override
+	public Employee[] getAllEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+    
+}

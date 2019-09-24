@@ -1,0 +1,12 @@
+package com.hcl.json.dao;
+
+import com.hcl.json.model.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao{
+
+	public Employee[] getAllEmployees() {
+		
+		return null;
+	}
+
+}

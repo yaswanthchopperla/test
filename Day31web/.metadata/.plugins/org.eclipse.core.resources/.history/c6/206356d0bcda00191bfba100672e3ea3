@@ -1,0 +1,29 @@
+package Main;
+
+import java.rmi.RemoteException;
+
+import com.hcl.saikumar.SaiKumarProxy;
+import com.hcl.web.CaluculatorProxy;
+import com.u.UttamProxy;
+
+public class MainApp {
+   public static void main(String[] args) {
+	CaluculatorProxy c=new CaluculatorProxy();
+	UttamProxy u=new UttamProxy();
+	SaiKumarProxy s=new SaiKumarProxy();
+	int num1=0,num2=0,res=0;;
+	try {
+		num1=u.getInt();
+		System.out.println("Uttams    :"+num1);
+		num2=s.getInt();
+		System.out.println("SaiKumars :"+num2);
+		res=c.add(num1, num2);
+		System.out.println("ADD       :"+res);
+	} catch (RemoteException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	
+}
+}

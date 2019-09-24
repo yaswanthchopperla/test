@@ -1,0 +1,42 @@
+package com.journaldev.jaxrs.dao;
+
+import javax.ws.rs.core.Response;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.journaldev.jaxrs.model.Employee;
+
+public class EmployeeDAOImpl implements EmployeeDAO {
+
+	@Override
+	public Response addEmployee(Employee e) {
+        SessionFactory sf=HibernateUtil.getConnection();
+        Session s=sf.openSession();
+        Transaction t=s.beginTransaction();
+        s.save(e);
+        t.commit();
+        return " Employee Added Successfuly";
+		
+	}
+
+	@Override
+	public String deleteEmployee(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee getEmployee(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee[] getAllEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+    
+}

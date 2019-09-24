@@ -1,0 +1,5 @@
+package com.hcl.json.model;
+
+public class Employee {
+
+}

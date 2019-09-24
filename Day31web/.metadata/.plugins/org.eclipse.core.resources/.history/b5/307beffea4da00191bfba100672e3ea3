@@ -1,0 +1,17 @@
+package com.hcl.web;
+
+import java.rmi.RemoteException;
+
+public class MainApplication {
+    public static void main(String[] args) {
+		int result=0;
+		CaluculatorProxy caluculatorProxy = new CaluculatorProxy();
+		try {
+			result=caluculatorProxy.add(2, 7);
+			System.out.println("Addition is :" +result);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

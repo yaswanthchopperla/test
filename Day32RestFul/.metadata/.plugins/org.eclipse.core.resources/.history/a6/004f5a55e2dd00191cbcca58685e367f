@@ -1,0 +1,11 @@
+package com.hcl.model;
+
+import java.sql.Date;
+
+public class Employee {
+   private long empno;
+   private String empname;
+   private long salary;
+   private String band;
+   private String dateofjoin;
+} 

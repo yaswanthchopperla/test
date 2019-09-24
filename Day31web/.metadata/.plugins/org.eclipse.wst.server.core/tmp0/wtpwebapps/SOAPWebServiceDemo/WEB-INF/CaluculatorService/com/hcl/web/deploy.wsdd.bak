@@ -1,0 +1,34 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CaluculatorService WSDL service -->
+
+  <service name="Caluculator" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://web.hcl.com"/>
+      <parameter name="wsdlServiceElement" value="CaluculatorService"/>
+      <parameter name="schemaQualified" value="http://web.hcl.com"/>
+      <parameter name="wsdlServicePort" value="Caluculator"/>
+      <parameter name="className" value="com.hcl.web.CaluculatorSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="Caluculator"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="add" qname="operNS:add" xmlns:operNS="http://web.hcl.com" returnQName="retNS:addReturn" xmlns:retNS="http://web.hcl.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:num1" xmlns:pns="http://web.hcl.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:num2" xmlns:pns="http://web.hcl.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="mul" qname="operNS:mul" xmlns:operNS="http://web.hcl.com" returnQName="retNS:mulReturn" xmlns:retNS="http://web.hcl.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:num1" xmlns:pns="http://web.hcl.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:num2" xmlns:pns="http://web.hcl.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="add mul"/>
+
+  </service>
+</deployment>

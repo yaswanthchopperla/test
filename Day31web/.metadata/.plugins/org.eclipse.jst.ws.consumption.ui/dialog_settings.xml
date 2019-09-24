@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.jst.ws.client.type.java">
+		<item value="http://127.168.1.107:8181/HelloWorld?wsdl"/>
+		<item value="http://127.168.1.107:8181/Hello?wsdl"/>
+		<item value="http://127.0.0.1:9999/ctf?wsdl"/>
+		<item value="http://192.168.1.12:8081/Uttam/services/Uttam?wsdl"/>
+		<item value="http://192.168.1.102:8585/SOAPWebServiceTwo/services/SaiKumar?wsdl"/>
+	</list>
+</section>

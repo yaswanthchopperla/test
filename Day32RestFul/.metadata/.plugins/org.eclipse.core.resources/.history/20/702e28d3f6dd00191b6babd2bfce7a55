@@ -1,0 +1,5 @@
+package com.hcl.json.service;
+
+public @interface Path {
+
+}

@@ -1,0 +1,22 @@
+package com.hcl.json.service;
+
+import java.util.List;
+
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.hcl.json.dao.EmployeeDao;
+import com.hcl.json.dao.EmployeeDaoImpl;
+import com.hcl.json.model.Employee;
+
+@Produces(MediaType.APPLICATION_JSON)
+public class EmployeeServiceImpl implements EmployeeService {
+	private EmployeeDao employeedao=new EmployeeDaoImpl();
+	
+	
+    public List<Employee> getAllEmployees() {
+    return employeedao.getAllEmployees();
+	}
+	
+
+}

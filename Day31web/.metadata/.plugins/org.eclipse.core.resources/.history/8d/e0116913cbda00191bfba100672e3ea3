@@ -1,0 +1,17 @@
+package main;
+
+import java.rmi.RemoteException;
+
+import helloservice.endpoint.HelloProxy;
+
+public class Main {
+  public static void main(String[] args) {
+	HelloProxy p=new HelloProxy();
+	try {
+		System.out.println(p.sayHello("sai"));
+	} catch (RemoteException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+}

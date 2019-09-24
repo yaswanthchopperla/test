@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employee SYSTEM "employee.dtd">
+<employee>
+   <band>E</band>
+   <no>1</no>
+   <name>yaswanth</name>
+   <salary>45000</salary>
+   <DateOfJoin>2019-12-19</DateOfJoin>
+</employee>

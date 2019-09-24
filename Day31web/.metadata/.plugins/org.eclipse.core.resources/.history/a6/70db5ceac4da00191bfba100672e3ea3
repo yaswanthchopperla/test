@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//src/com/hcl/saikumar/SaiKumar.java=UTF-8
+encoding//src/com/hcl/saikumar/SaiKumarService.java=UTF-8
+encoding//src/com/hcl/saikumar/SaiKumarServiceLocator.java=UTF-8
+encoding//src/com/hcl/saikumar/SaiKumarSoapBindingStub.java=UTF-8
+encoding//src/com/hcl/web/Caluculator.java=UTF-8
+encoding//src/com/hcl/web/CaluculatorService.java=UTF-8
+encoding//src/com/hcl/web/CaluculatorServiceLocator.java=UTF-8
+encoding//src/com/hcl/web/CaluculatorSoapBindingStub.java=UTF-8
+encoding//src/com/u/Uttam.java=UTF-8
+encoding//src/com/u/UttamService.java=UTF-8
+encoding//src/com/u/UttamServiceLocator.java=UTF-8
+encoding//src/com/u/UttamSoapBindingStub.java=UTF-8
+encoding//src/helloservice/endpoint/Hello_PortType.java=UTF-8

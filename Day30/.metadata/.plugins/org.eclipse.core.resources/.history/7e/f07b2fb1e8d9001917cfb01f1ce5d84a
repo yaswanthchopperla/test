@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="employees">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="band" type="xs:string" />
+							<xs:element name="empno" type="xs:int" />
+							<xs:element name="empname" type="xs:string" />
+							<xs:element name="salary" type="xs:int" />
+							<xs:element name="DateOfJoin" type="xs:date" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	

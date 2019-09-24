@@ -1,0 +1,5 @@
+package com.hcl.json.mode;
+
+public class Employee {
+
+}

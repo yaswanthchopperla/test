@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.jst.ws.internal.axis.creation.ui.widgets.bean.BeanConfigWidget.wsdlFileText_">
+		<item value="Yaswanth.wsdl"/>
+		<item value="Sapcode.wsdl"/>
+		<item value="Details.wsdl"/>
+		<item value="Caluculator.wsdl"/>
+	</list>
+</section>
